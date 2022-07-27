@@ -20,7 +20,7 @@
 
 > Inspired by and improved upon [CommonRegex](https://github.com/madisonmay/CommonRegex)
 
-This is a collection of commonly used regular expressions. The API provides simple function calls to match the strings corresponding to specified patterns.
+This is a collection of commonly used regular expressions. This library provides a simple API interface to match the strings corresponding to specified patterns.
 
 ## Installation
 
