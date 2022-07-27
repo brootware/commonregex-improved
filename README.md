@@ -24,7 +24,7 @@ This is a collection of commonly used regular expressions. The API provides simp
 
 ## Installation
 
-```pip install commonregex-improved```
+```pip install --upgrade commonregex-improved```
 
 ## Usage
 
@@ -44,6 +44,7 @@ phone_list = CommonRegex.phones_with_exts(text)
 email_list = CommonRegex.emails(text)
 # ['harold.smith@gmail.com']
 identify_all = CommonRegex.find_all(text)
+# Do note that the regexes might clash for this find_all function
 # ['Jan 9th 2012', '5:00', '(519)-236-2723', '(519)-236-2723x341', 'harold.smith@gmail.com', 'www.linkedin.com']
 ```
 
