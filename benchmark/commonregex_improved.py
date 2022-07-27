@@ -1,4 +1,3 @@
-from types import MethodType
 import re
 
 date = "(?i)(?:[0-3]?\d(?:st|nd|rd|th)?\s+(?:of\s+)?(?:jan\.?|january|feb\.?|february|mar\.?|march|apr\.?|april|may|jun\.?|june|jul\.?|july|aug\.?|august|sep\.?|september|oct\.?|october|nov\.?|november|dec\.?|december)|(?:jan\.?|january|feb\.?|february|mar\.?|march|apr\.?|april|may|jun\.?|june|jul\.?|july|aug\.?|august|sep\.?|september|oct\.?|october|nov\.?|november|dec\.?|december)\s+[0-3]?\d(?:st|nd|rd|th)?)(?:\,)?\s*(?:\d{4})?|[0-3]?\d[-\./][0-3]?\d[-\./]\d{2,4}"
@@ -41,6 +40,16 @@ regex_map = {
     "git_repos": git_repo
 }
 
+def match_all(textchunk: str) -> list:
+    matched_list = []
+    for line in textchunk.splitlines():
+        for value in regex_map.values():
+            if re.search(value, line):
+                pattern_string = re.search(value, line)
+                sensitive_string = pattern_string.group(0)
+                matched_list.append(sensitive_string)
+    return matched_list
+    
 def match(text: str, regex: str) -> list:
     parsed = []
     parsed.append(re.findall(regex, text))
@@ -58,6 +67,9 @@ def Phones(text: str) -> list:
 
 def Phones_with_exts(text: str) -> list:
     return match(text, regex_map["phones_with_exts"])
+
+def Emails(text:str) -> list:
+    return match(text, regex_map["emails"])
 
 def Links(text: str) -> list:
     return match(text, regex_map["links"])

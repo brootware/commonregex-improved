@@ -18,6 +18,7 @@ zip_code = r'\b\d{5}(?:[-\s]\d{4})?\b'
 po_box = r'P\.? ?O\.? Box \d+'
 ssn = '(?!000|666|333)0*(?:[0-6][0-9][0-9]|[0-7][0-6][0-9]|[0-7][0-7][0-2])[- ](?!00)[0-9]{2}[- ](?!0000)[0-9]{4}'
 git_repo = "((git|ssh|http(s)?)|(git@[\w\.]+))(:(\/\/)?)([\w\.@\:/\-~]+)(\.git)(\/)?"
+base_64 = r"^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
 
 regex_map = {
     "dates": date,
@@ -37,65 +38,79 @@ regex_map = {
     "zip_codes": zip_code,
     "po_boxes": po_box,
     "ssn_number": ssn,
-    "git_repos": git_repo
+    "git_repos": git_repo,
+    "base_64": base_64
 }
 
+def find_all(textchunk: str) -> list:
+    matched_list = []
+    for line in textchunk.splitlines():
+        for value in regex_map.values():
+            if re.search(value, line):
+                pattern_string = re.search(value, line)
+                sensitive_string = pattern_string.group(0)
+                matched_list.append(sensitive_string)
+    return matched_list
+    
 def match(text: str, regex: str) -> list:
     parsed = []
     parsed.append(re.findall(regex, text))
     parsed = sum(parsed, [])
     return parsed
 
-def Dates(text: str) -> list:
+def dates(text: str) -> list:
     return match(text, regex_map["dates"])
 
-def Times(text: str) -> list:
+def times(text: str) -> list:
     return match(text, regex_map["times"])
 
-def Phones(text: str) -> list:
+def phones(text: str) -> list:
     return match(text, regex_map["phones"])
 
-def Phones_with_exts(text: str) -> list:
+def phones_with_exts(text: str) -> list:
     return match(text, regex_map["phones_with_exts"])
 
-def Emails(text:str) -> list:
+def emails(text:str) -> list:
     return match(text, regex_map["emails"])
 
-def Links(text: str) -> list:
+def links(text: str) -> list:
     return match(text, regex_map["links"])
 
-def IPV4s(text: str) -> list:
+def ipv4s(text: str) -> list:
     return match(text, regex_map["ipv4"])
 
-def IPV6s(text: str) -> list:
+def ipv6s(text: str) -> list:
     return match(text, regex_map["ipv6"])
 
-def IPs(text: str) -> list:
+def ips(text: str) -> list:
     return match(text, regex_map["ips"])
 
-def Prices(text: str) -> list:
+def prices(text: str) -> list:
     return match(text, regex_map["prices"])
 
-def Hex_Colors(text: str) -> list:
+def hex_colors(text: str) -> list:
     return match(text, regex_map["hex_colors"])
 
-def Credit_Cards(text: str) -> list:
+def credit_cards(text: str) -> list:
     return match(text, regex_map["credit_cards"])
 
-def Btc_Address(text: str) -> list:
+def btc_address(text: str) -> list:
     return match(text, regex_map["btc_addresses"])
 
-def Street_Addresses(text: str) -> list:
+def street_addresses(text: str) -> list:
     return match(text, regex_map["street_addresses"])
 
-def Zip_Codes(text: str) -> list:
+def zip_codes(text: str) -> list:
     return match(text, regex_map["zip_codes"])
 
-def Po_Boxes(text: str) -> list:
+def po_boxes(text: str) -> list:
     return match(text, regex_map["po_boxes"])
 
-def Ssn(text: str) -> list:
+def ssn(text: str) -> list:
     return match(text, regex_map["ssn_number"])
 
-def Git_Repo(text: str) -> list:
+def git_repo(text: str) -> list:
     return match(text, regex_map["git_repos"])
+
+def base_64(text: str) -> list:
+    return match(text, regex_map["base_64"])

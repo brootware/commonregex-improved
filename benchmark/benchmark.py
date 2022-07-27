@@ -1,5 +1,5 @@
-import commonregex_improved as cregex
 from commonregex import CommonRegex
+import commonregex_improved as cregex
 import cProfile
 import pstats
 
@@ -70,16 +70,16 @@ def main():
     
     improved_stats = pstats.Stats(improved)
     improved_stats.sort_stats(pstats.SortKey.TIME)
-    # improved_stats.print_stats()
-    improved_stats.dump_stats(filename='improved_profile.prof')
+    improved_stats.print_stats()
+    # improved_stats.dump_stats(filename='improved_profile.prof')
 
     with cProfile.Profile() as orig:
         loop_function_calls_original()
 
     original_stats = pstats.Stats(orig)
     original_stats.sort_stats(pstats.SortKey.TIME)
-    # original_stats.print_stats()
-    original_stats.dump_stats(filename='original_profile.prof')
+    original_stats.print_stats()
+    # original_stats.dump_stats(filename='original_profile.prof')
 
 
 if __name__ == '__main__':

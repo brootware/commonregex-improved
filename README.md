@@ -33,14 +33,32 @@ import commonregex-improved as CommonRegex
 
 text = "John, please get that article on www.linkedin.com to me by 5:00PM on Jan 9th 2012. 4:00 would be ideal, actually. If you have any questions, You can reach me at (519)-236-2723x341 or get in touch with my associate at harold.smith@gmail.com"
 
-date_list = CommonRegex.Dates(text)
+date_list = CommonRegex.dates(text)
 # ['Jan 9th 2012']
-time_list = CommonRegex.Times(text)
+time_list = CommonRegex.times(text)
 # ['5:00PM', '4:00']
-url_list = CommonRegex.Links(text)
+url_list = CommonRegex.links(text)
 # ['www.linkedin.com', 'harold.smith@gmail.com']
-phone_list = CommonRegex.Phones_with_exts(text)  
+phone_list = CommonRegex.phones_with_exts(text)  
 # ['(519)-236-2723x341']
-email_list = CommonRegex.Emails(text)
+email_list = CommonRegex.emails(text)
 # ['harold.smith@gmail.com']
+identify_all = CommonRegex.find_all(text)
+# ['Jan 9th 2012', '5:00', '(519)-236-2723', '(519)-236-2723x341', 'harold.smith@gmail.com', 'www.linkedin.com']
 ```
+
+## ⚔️ Performance benchmark
+
+[CommonRegex](https://github.com/madisonmay/CommonRegex) is awesome!
+
+So why re-implement the popular original commonregex project? The API calls to each of the regular expressions are really slow. It takes 12 seconds for a total of 2999 calls to Dates function in the original version of CommonRegex.
+
+![original](./benchmark/original.png)
+
+Here is the improved version of CommonRegex with the same number of calls. It merely takes 2 seconds.
+
+![improved](./benchmark/improved.png)
+
+You can find more detailed results about [original](./benchmark/original_cregex_result.pdf) and [improved](./benchmark/cregex_improved_result.pdf) versions.
+
+## Supported methods
