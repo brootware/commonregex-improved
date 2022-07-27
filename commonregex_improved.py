@@ -58,6 +58,9 @@ def Phones(text: str) -> list:
 def Phones_with_exts(text: str) -> list:
     return match(text, regex_map["phones_with_exts"])
 
+def Emails(text:str) -> list:
+    return match(text, regex_map["emails"])
+
 def Links(text: str) -> list:
     return match(text, regex_map["links"])
 

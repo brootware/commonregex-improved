@@ -24,10 +24,23 @@ This is a collection of commonly used regular expressions. The API provides simp
 
 ## Installation
 
-Coming soon
+```pip install commonregex-improved```
 
 ## Usage
 
 ```python
+import commonregex-improved as CommonRegex
 
+text = "John, please get that article on www.linkedin.com to me by 5:00PM on Jan 9th 2012. 4:00 would be ideal, actually. If you have any questions, You can reach me at (519)-236-2723x341 or get in touch with my associate at harold.smith@gmail.com"
+
+date_list = CommonRegex.Dates(text)
+# ['Jan 9th 2012']
+time_list = CommonRegex.Times(text)
+# ['5:00PM', '4:00']
+url_list = CommonRegex.Links(text)
+# ['www.linkedin.com', 'harold.smith@gmail.com']
+phone_list = CommonRegex.Phones_with_exts(text)  
+# ['(519)-236-2723x341']
+email_list = CommonRegex.Emails(text)
+# ['harold.smith@gmail.com']
 ```
