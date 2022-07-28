@@ -18,6 +18,14 @@ and simply didn't have the time to go back and retroactively create one.
 
 - None at the moment.
 
+## [0.0.2] - 2022-07-28
+
+Working import version
+
+### Changed
+
+- Working import version
+
 ## [0.0.1] - 2022-07-27
 
 First release of this project
