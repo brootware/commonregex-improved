@@ -4,12 +4,12 @@
 
 <p align="center">
   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
-  <img alt="PyPI - Downloads" src="https://pepy.tech/badge/pyredactkit/month">
-   <!-- <img alt="PyPI - Downloads" src="https://pepy.tech/badge/pyredactkit"> -->
+  <!-- <img alt="PyPI - Downloads" src="https://pepy.tech/badge/commonregex-improved/month"> -->
+   <img alt="PyPI - Downloads" src="https://pepy.tech/badge/commonregex-improved">
    <a href="https://twitter.com/brootware"><img src="https://img.shields.io/twitter/follow/brootware?style=social" alt="Twitter Follow"></a>
-   <!-- <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/commonregex-improved"> <img alt="PyPI" src="https://img.shields.io/pypi/v/commonregex-improved"> -->
-   <!-- <a href="https://sonarcloud.io/summary/new_code?id=brootware_PyRedactKit"><img src="https://sonarcloud.io/api/project_badges/measure?project=brootware_PyRedactKit&metric=alert_status" alt="reliability rating"></a> -->
-   <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/brootware/pyredactkit/CI?label=CI&branch=dev">
+   <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/commonregex-improved"> <img alt="PyPI" src="https://img.shields.io/pypi/v/commonregex-improved">
+   <a href="https://sonarcloud.io/summary/new_code?id=brootware_commonregex-improved"><img src="https://sonarcloud.io/api/project_badges/measure?project=brootware_commonregex-improved&metric=alert_status" alt="reliability rating"></a>
+   <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/brootware/commonregex-improved/CI?label=CI&branch=main">
 </p>
 
 <p align="center">
@@ -59,12 +59,33 @@ It takes 12 seconds for a total of 2999 calls to Dates function in the original 
 
 You can find more detailed results about [original](./benchmark/original_cregex_result.pdf) and [improved](./benchmark/cregex_improved_result.pdf) versions.
 
-## Supported methods
+## Features / Supported Methods
 
-`obj.dates()`
-
-`obj.times()`
-
-`obj.phones()`
-
-`obj.phones_with_exts()`
+* `dates(text: str)`
+* `times(text: str)`
+* `phones(text: str)`
+* `phones_with_exts(text: str)`
+* `links(text: str)`
+* `emails(text: str)`
+* `ipv4s(text: str)`
+* `ipv6s(text: str)`
+* `ips(text: str)`
+* `not_known_ports(text: str)`
+* `prices(text: str)`
+* `hex_colors(text: str)`
+* `credit_cards(text: str)`
+* `visa_cards(text: str)`
+* `master_cards(text: str)`
+* `btc_address(text: str)`
+* `street_addresses(text: str)`
+* `zip_codes(text: str)`
+* `po_boxes(text: str)`
+* `ssn_numbers(text: str)`
+* `md5_hashes(text: str)`
+* `sha1_hashes(text: str)`
+* `sha256_hashes(text: str)`
+* `isbn13s(text: str)`
+* `isbn10s(text: str)`
+* `mac_addresses(text: str)`
+* `iban_numbers(text: str)`
+* `git_repos(text: str)`
