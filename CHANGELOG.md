@@ -18,6 +18,14 @@ and simply didn't have the time to go back and retroactively create one.
 
 - None at the moment.
 
+## [0.0.3] - 2022-07-28
+
+Fixed time regex
+
+### Changed
+
+- Fixed time regex
+
 ## [0.0.2] - 2022-07-28
 
 Working import version
