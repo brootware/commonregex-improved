@@ -29,7 +29,7 @@ This is a collection of commonly used regular expressions. This library provides
 ## Usage
 
 ```python
-import commonregex as CommonRegex
+import commonregex_improved as CommonRegex
 
 text = "John, please get that article on www.linkedin.com to me by 5:00PM on Jan 9th 2012. 4:00 would be ideal, actually. If you have any questions, You can reach me at (519)-236-2723x341 or get in touch with my associate at harold.smith@gmail.com. You can find my ip address at 127.0.0.1 or at 64.248.67.225. I also have a secret protected with md5 8a2292371ee60f8212096c06fe3335fd"
 
