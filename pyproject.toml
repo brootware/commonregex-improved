@@ -24,7 +24,7 @@ classifiers = [
     "Intended Audience :: Developers",
 ]
 packages = [
-  { include = "commonregex" },
+  { include = "commonregex_improved.py" },
 ]
 
 [tool.poetry.dependencies]
