@@ -28,7 +28,7 @@ isbn10 = '(?:[\d]-?){9}[\dxX]'
 mac_address = '(([0-9a-fA-F]{2}[:-]){5}([0-9a-fA-F]{2}))'
 iban_number = '[A-Z]{2}\d{2}[A-Z0-9]{4}\d{7}([A-Z\d]?){0,16}'
 git_repo = """((git|ssh|http(s)?)|(git@[\w\.]+))(:(\/\/)?)([\w\.@\:/\-~]+)(\.git)(\/)?"""
-base_64 = r"^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
+
 
 regex_map = {
     "dates": date,
@@ -58,8 +58,7 @@ regex_map = {
     "isbn10": isbn10,
     "mac_addresses": mac_address,
     "iban_numbers": iban_number,
-    "git_repos": git_repo,
-    "base_64": base_64
+    "git_repos": git_repo
 }
 
 def find_all(textchunk: str) -> list:
@@ -190,6 +189,3 @@ def iban_numbers(text: str) -> list:
 
 def git_repos(text: str) -> list:
     return match_by_regex_search(text, regex_map["git_repos"])
-
-def base_64(text: str) -> list:
-    return match(text, regex_map["base_64"])

@@ -2,6 +2,11 @@ import pytest
 import re
 import commonregex_improved as cregex
 
+# def test_cregex_find_all():
+#   text = "John, please get that article on www.linkedin.com to me by 5:00PM on Jan 9th 2012. 4:00 would be ideal, actually. If you have any questions, You can reach me at (519)-236-2723x341 or get in touch with my associate at harold.smith@gmail.com"
+#   test_data=[]
+
+
 
 def test_cregex_dates():
     test_data = ["3-23-17",
@@ -426,7 +431,10 @@ def test_cregex_git_repos():
 def test_cregex_base_64():
     test_data = ["UEBzc3cwcmRAMTIz",
     "VGhpc0lTQVNFY3JldHBhc3N3b3Jk",
-    "aHR0cHM6Ly9naXRodWIuY29tL2Jyb290d2FyZS9jb21tb25yZWdleC1pbXByb3ZlZC5naXQ="]
+    "aHR0cHM6Ly9naXRodWIuY29tL2Jyb290d2FyZS9jb21tb25yZWdleC1pbXByb3ZlZC5naXQ=",
+    "QVBJX1RPS0VO", 
+    "UzNjcjN0UGFzc3dvcmQ=", 
+    "U3VwM3JTM2NyZXRQQHNzd29yZA=="]
 
     for test_string in test_data:
         assert cregex.base_64(test_string) == [test_string], "Base 64 regex failed on: " + test_string

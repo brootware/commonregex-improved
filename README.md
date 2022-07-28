@@ -31,7 +31,7 @@ This is a collection of commonly used regular expressions. This library provides
 ```python
 import commonregex as CommonRegex
 
-text = "John, please get that article on www.linkedin.com to me by 5:00PM on Jan 9th 2012. 4:00 would be ideal, actually. If you have any questions, You can reach me at (519)-236-2723x341 or get in touch with my associate at harold.smith@gmail.com"
+text = "John, please get that article on www.linkedin.com to me by 5:00PM on Jan 9th 2012. 4:00 would be ideal, actually. If you have any questions, You can reach me at (519)-236-2723x341 or get in touch with my associate at harold.smith@gmail.com. You can find my ip address at 127.0.0.1 or at 64.248.67.225. I also have a secret protected with md5 8a2292371ee60f8212096c06fe3335fd"
 
 date_list = CommonRegex.dates(text)
 # ['Jan 9th 2012']
@@ -43,9 +43,8 @@ phone_list = CommonRegex.phones_with_exts(text)
 # ['(519)-236-2723x341']
 email_list = CommonRegex.emails(text)
 # ['harold.smith@gmail.com']
-identify_all = CommonRegex.find_all(text)
-# Do note that the regexes might clash for this find_all function
-# ['Jan 9th 2012', '5:00', '(519)-236-2723', '(519)-236-2723x341', 'harold.smith@gmail.com', 'www.linkedin.com']
+md5_list = CommonRegex.md5_hashes(text)
+# ['8a2292371ee60f8212096c06fe3335fd']
 ```
 
 ## ⚔️ Performance benchmark
@@ -61,3 +60,11 @@ It takes 12 seconds for a total of 2999 calls to Dates function in the original 
 You can find more detailed results about [original](./benchmark/original_cregex_result.pdf) and [improved](./benchmark/cregex_improved_result.pdf) versions.
 
 ## Supported methods
+
+`obj.dates()`
+
+`obj.times()`
+
+`obj.phones()`
+
+`obj.phones_with_exts()`
