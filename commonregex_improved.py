@@ -110,7 +110,7 @@ def dates(text: str) -> list:
     return match(text, regex_map["dates"])
 
 def times(text: str) -> list:
-    return match_by_regex_search(text, regex_map["times"])
+    return match(text, regex_map["times"])
 
 def phones(text: str) -> list:
     return match(text, regex_map["phones"])
