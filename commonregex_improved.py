@@ -61,21 +61,6 @@ regex_map = {
     "git_repos": git_repo
 }
 
-def find_all(textchunk: str) -> list:
-    """Function to identify all matching patterns in a text chunk
-    Args:
-        textchunk (str) : textchunk to be supplied to identify pattern
-    Returns:
-        list (list): list of sensitive data found in lines
-    """
-    matched_list = []
-    for line in textchunk.split():
-        for value in regex_map.values():
-            if re.search(value, line):
-                pattern_string = re.search(value, line)
-                sensitive_string = pattern_string.group(0)
-                matched_list.append(sensitive_string)
-    return matched_list
     
 def match(text: str, regex: str) -> list:
     """Function to match using regex findall function
