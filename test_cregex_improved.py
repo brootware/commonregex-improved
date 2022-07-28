@@ -420,14 +420,3 @@ def test_cregex_git_repos():
 
     for test_string in failing_tests:
         assert cregex.git_repos(test_string) != [test_string], "This is not a Git repo " + test_string
-
-def test_cregex_base_64():
-    test_data = ["UEBzc3cwcmRAMTIz",
-    "VGhpc0lTQVNFY3JldHBhc3N3b3Jk",
-    "aHR0cHM6Ly9naXRodWIuY29tL2Jyb290d2FyZS9jb21tb25yZWdleC1pbXByb3ZlZC5naXQ=",
-    "QVBJX1RPS0VO", 
-    "UzNjcjN0UGFzc3dvcmQ=", 
-    "U3VwM3JTM2NyZXRQQHNzd29yZA=="]
-
-    for test_string in test_data:
-        assert cregex.base_64(test_string) == [test_string], "Base 64 regex failed on: " + test_string
