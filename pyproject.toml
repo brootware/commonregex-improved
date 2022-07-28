@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "commonregex-improved"
-version = "0.0.1"
+version = "0.0.2"
 description = "Python cli tool to redact sensitive data"
 authors = ["brootware <brootware@outlook.com>"]
 license = "MIT"
@@ -22,6 +22,9 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Information Technology",
     "Intended Audience :: Developers",
+]
+packages = [
+  { include = "commonregex_improved" },
 ]
 
 [tool.poetry.dependencies]

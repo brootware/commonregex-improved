@@ -29,7 +29,7 @@ This is a collection of commonly used regular expressions. This library provides
 ## Usage
 
 ```python
-import commonregex-improved as CommonRegex
+import commonregex as CommonRegex
 
 text = "John, please get that article on www.linkedin.com to me by 5:00PM on Jan 9th 2012. 4:00 would be ideal, actually. If you have any questions, You can reach me at (519)-236-2723x341 or get in touch with my associate at harold.smith@gmail.com"
 
@@ -52,13 +52,11 @@ identify_all = CommonRegex.find_all(text)
 
 [CommonRegex](https://github.com/madisonmay/CommonRegex) is awesome!
 
-So why re-implement the popular original commonregex project? The API calls to each of the regular expressions are really slow. It takes 12 seconds for a total of 2999 calls to Dates function in the original version of CommonRegex.
+So why re-implement the popular original commonregex project? The API calls to each of the regular expressions are really slow.
 
-![original](./benchmark/original.png)
+It takes 12 seconds for a total of 2999 calls to Dates function in the original version of CommonRegex. While the improved version of CommonRegex with the same number of calls merely takes 2 seconds.
 
-Here is the improved version of CommonRegex with the same number of calls. It merely takes 2 seconds.
-
-![improved](./benchmark/improved.png)
+![improved](./benchmark/benchmark.png)
 
 You can find more detailed results about [original](./benchmark/original_cregex_result.pdf) and [improved](./benchmark/cregex_improved_result.pdf) versions.
 
