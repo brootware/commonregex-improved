@@ -18,6 +18,14 @@ and simply didn't have the time to go back and retroactively create one.
 
 - None at the moment.
 
+## [0.0.5] - 2022-07-29
+
+Changing project description and removing unused function.
+
+### Changed
+
+- Changing project description and removing unused function.
+
 ## [0.0.4] - 2022-07-28
 
 Fixed time regex again.
