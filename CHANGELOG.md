@@ -18,6 +18,14 @@ and simply didn't have the time to go back and retroactively create one.
 
 - None at the moment.
 
+## [1.0.0] - 2022-07-29
+
+Production release. Fixed all the minor regex errors.
+
+### Changed
+
+- Production release. Fixed all the minor regex errors.
+
 ## [0.0.5] - 2022-07-29
 
 Changing project description and removing unused function.

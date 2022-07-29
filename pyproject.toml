@@ -19,12 +19,12 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Security",
     "Operating System :: OS Independent",
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Information Technology",
     "Intended Audience :: Developers",
 ]
 packages = [
-  { include = "commonregex_improved.py" },
+  { include = "commonregex.py" },
 ]
 
 [tool.poetry.dependencies]
