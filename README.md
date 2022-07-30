@@ -24,7 +24,9 @@ This is a collection of commonly used regular expressions. This library provides
 
 ## Installation
 
-```pip install --upgrade commonregex-improved```
+```bash
+pip install --upgrade commonregex-improved
+```
 
 ## Usage
 
