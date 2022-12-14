@@ -1,5 +1,5 @@
 import re
-import commonregex as cregex
+import crim as cregex
 
 def test_cregex_dates():
     test_data = ["3-23-17",
