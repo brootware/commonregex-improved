@@ -1,6 +1,6 @@
 <br><br>
 
-<h1 align="center">CommonRegex Improved</h1>
+<h1 align="center">CommonRegex Improved (crim)</h1>
 
 <p align="center">
   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
