@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "commonregex-improved"
-version = "1.0.0"
+version = "1.0.1"
 description = "An improved version of original commonregex. Find all dates, times, emails, phone numbers, links, emails, ip addresses, prices, bitcoin address, and more in a string."
 authors = ["brootware <brootware@outlook.com>"]
 license = "MIT"
