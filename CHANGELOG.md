@@ -9,11 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Patched name collision with original commonregex package. New naming import as crim.
+- Optimized `match()` function thanks to <https://github.com/erezsh>'s catch.
+- added benchmark codes.
 
 ### Added
 
 - None at the moment.
+
+## [1.0.2] - 2022-12-19
+
+Optimized `match()` function thanks to <https://github.com/erezsh>'s catch.
 
 ## [1.0.1] - 2022-12-14
 
