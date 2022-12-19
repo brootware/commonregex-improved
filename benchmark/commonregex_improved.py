@@ -70,6 +70,9 @@ def match(text: str, regex: str) -> list:
     Returns:
         list (list): list of sensitive data found in lines
     """
+    # parsed = []
+    # parsed.append(re.findall(regex, text))
+    # parsed = sum(parsed, [])
     parsed = list(re.findall(regex, text))
     return parsed
 
@@ -105,7 +108,8 @@ def emails(text:str) -> list:
     return match(text, regex_map["emails"])
 
 def links(text: str) -> list:
-    return match_by_regex_search(text, regex_map["links"])
+    # return match_by_regex_search(text, regex_map["links"])
+    return match(text, regex_map["links"])
 
 def ipv4s(text: str) -> list:
     return match(text, regex_map["ipv4"])
