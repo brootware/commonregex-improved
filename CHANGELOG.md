@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Optimized `match()` function thanks to <https://github.com/erezsh>'s catch.
-- added benchmark codes.
+- Added benchmark codes.
+- Renamed regex vairables and prepended `re_`.
 
 ### Added
 
@@ -18,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.2] - 2022-12-19
 
-Optimized `match()` function thanks to <https://github.com/erezsh>'s catch.
+Optimized `match()` function thanks to <https://github.com/erezsh>'s catch. Renamed regex variables.
 
 ## [1.0.1] - 2022-12-14
 
