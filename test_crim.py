@@ -1,4 +1,3 @@
-import re
 import crim as cregex
 
 def test_cregex_dates():
